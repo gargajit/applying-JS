@@ -1,0 +1,12 @@
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    border: 3px solid rgba(43, 211, 226, 0.732);
+    border-radius: 10px;
+    background-color: rgba(28, 225, 225, 0.367);
+    color:rgb(148, 53, 22);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px rgba(139, 190, 184, 0.837);
+}
