@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .player-one {
+            position: relative;
+            top: 50px;
+            left: 100px;
+        }
+        button {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px 12px;
+            letter-spacing: 1px;
+            border: 2px solid rgba(137, 43, 226, 0.732);
+            border-radius: 10px;
+            background-color: rgba(137, 43, 226, 0.367);
+            color:chocolate;
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 4px plum;
+        }
+    </style>
+</head>
+<body>
+    <div class="player-one">
+        <button type="button">Player 1: Mario</button>
+    </div>
+</body>
+<script>
+    const button = document.querySelector("button");
+
+    button.addEventListener("click", updateName);
+
+    function updateName() {
+    const name = prompt("Enter a new name");
+    button.textContent = `Player 1: ${name}`;
+    }
+</script>
+</html>
