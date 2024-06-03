@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Generate Paragraph Content</title>
+    <style>
+        #btn {
+            padding: 0.8rem;
+            background-color: rgb(247, 196, 255);
+            border: 2px solid rgb(168, 39, 180);
+            border-radius: 1rem;
+            box-shadow: -4px 4px 8px rgb(80, 6, 65);
+            margin: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+        <p id="p-element">This is a paragraph Element.</p>
+    </div>
+    <button id="btn">Click Me!</button>
+    <script>
+        function changeElement() {
+        const container = document.getElementById("container");
+
+        const newElement = document.createElement("h1");
+        newElement.textContent = "This is a H1 element";
+
+        const oldElement = document.getElementById("p-element");
+
+        container.replaceChild(newElement, oldElement);
+    }
+
+    const button = document.getElementById("btn");
+    button.addEventListener("click", changeElement);
+    </script>
+  </body>
+</html>
