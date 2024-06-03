@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Toggle Image</title>
+    <style>
+        button {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 5px 12px;
+        letter-spacing: 1px;
+        border: 3px solid rgba(57, 148, 184, 0.732);
+        border-radius: 10px;
+        background-color: rgba(28, 153, 225, 0.367);
+        color:rgb(146, 40, 5);
+        cursor: pointer;
+        text-transform: uppercase;
+        box-shadow: 2px 2px 4px rgba(54, 129, 172, 0.837);
+        margin-right: 5rem;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="first-div">
+        <h1>Choose Your Side!</h1>
+        <img id="choose-side" src="./images/jedi.jpg" alt="a jedi" height="300px">
+    </div>
+    <div class="btn-div">
+        <button id="toggle-btn"><img src="./icons/arrow-clockwise.svg" alt="arrow-clockwise svg"></button>
+    </div>
+    <script>
+        let isJedi = true;
+
+        function toggleImage() {
+            const imageElement = document.getElementById("choose-side");
+
+            if(isJedi){
+                imageElement.src = "./images/darth-vader.jpg";
+            } else {
+                imageElement.src = "./images/jedi.jpg";
+            }
+            isJedi = !isJedi;
+        }
+
+        const button = document.getElementById("toggle-btn");
+        button.addEventListener("click", toggleImage)
+    </script>
+  </body>
+</html>
