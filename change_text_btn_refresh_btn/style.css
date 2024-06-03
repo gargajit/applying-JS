@@ -1,0 +1,45 @@
+button {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    border: 3px solid rgba(184, 177, 57, 0.732);
+    border-radius: 10px;
+    background-color: rgba(212, 225, 28, 0.367);
+    color:rgb(146, 40, 5);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px rgba(149, 172, 54, 0.837);
+    margin-right: 5rem;
+    position: absolute;  
+}
+
+
+#demo {
+    font-family: Arial, Helvetica, sans-serif;
+    color:brown;
+}
+
+
+.first-div {
+    border: 5px solid yellowgreen;
+    width: 300px;
+    border-radius: 40px;
+    box-shadow: 2px 4px 4px rgba(129, 175, 36, 0.634);
+    display: flex;
+    justify-content: center;
+}
+
+
+.btn-div {
+    position: relative;
+    top: 50px;
+    left: 80px;
+    display: flex;
+    align-items: center
+}
+
+
+#toggle-btn {
+    position: absolute;
+    left: 120px;
+}
