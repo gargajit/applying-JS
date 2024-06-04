@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">Point me if I am Violet.</h2>
+</body>
+<script>
+     const x = document.getElementById("demo");
+     x.style.color = "blueviolet";
+    function mouseEnter() {
+        document.getElementById("demo").style.color = "brown";
+        document.getElementById("demo").innerHTML = "Don't point me, I am Brown."
+    }
+    function mouseLeave() {
+       document.getElementById("demo").style.color = "blueviolet";
+       document.getElementById("demo").innerHTML = "Point me if I am Violet."
+    }
+</script>
+</html>
