@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            padding: 8px;
+            border: 2px solid rgb(14, 156, 154);
+            border-radius: 5px;
+            font-size: large;
+            background-color: rgba(178, 252, 227, 0.477);
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+<input type="text" id="myText" value="Hello">
+<script>
+    function mouseEnterText() {
+    document.getElementById("myText").value = "Have a nice day!";
+    }
+    function mouseLeaveText() {
+    document.getElementById("myText").value = "Hello";
+    }
+    const x = document.getElementById("myText");
+    x.addEventListener("mouseenter", mouseEnterText);   
+    x.addEventListener("mouseleave", mouseLeaveText); 
+</script>
+</body>
+</html>
