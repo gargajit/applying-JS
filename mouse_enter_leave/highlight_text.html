@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="demo" onmouseenter="mouseEnter()" onmouseleave="mouseLeave()">Make Heading Red on mouse hover</h2>
+</body>
+<script>
+    function mouseEnter() {
+        document.getElementById("demo").style.color = "red";
+    }
+    function mouseLeave() {
+        document.getElementById("demo").style.color = "black";
+    }
+</script>
+</html>
