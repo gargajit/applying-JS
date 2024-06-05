@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Date</title>
+</head>
+<body>
+    <button id="btn">Get Date</button>
+    <p id="demo"></p>
+    <script>
+        function getDate() {
+        document.getElementById("demo").innerHTML = Date();  
+        }
+        const element = document.getElementById("btn");
+        element.addEventListener("click", getDate);
+    </script>
+</body>
+</html>
