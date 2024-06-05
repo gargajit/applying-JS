@@ -1,0 +1,34 @@
+p {
+    font-family: cursive;
+    font-size: large;
+    padding: 8px 20px;
+    border-radius: 2rem;
+}
+.right {
+    display: flex;
+    flex-direction: row-reverse;
+}
+.left {
+    display: flex;
+}
+.right > p {
+    border: 2px solid #f2eded;
+    /*background-color: #be8b2e3a;*/
+    background-color: #f2eded;
+}
+.left > p {
+    border: 2px solid #ffff; 
+    background-color: #91a8d135;
+}
+span {
+    color:teal;
+}
+
+input{
+    border: 2px solid #f2eded;
+    border-radius: 2rem;
+    font-family: cursive;
+    font-size: large;
+    padding: 8px 20px;
+    background-color: #f2eded;
+}
