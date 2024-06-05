@@ -1,0 +1,32 @@
+#btn-1 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    border: 3px solid rgba(57, 178, 184, 0.732);
+    border-radius: 10px;
+    background-color: rgba(46, 185, 220, 0.367);
+    color:rgb(10, 3, 24);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px rgba(86, 175, 202, 0.837);
+    margin-right: 5rem;
+    
+}
+
+#btn-2 {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 5px 12px;
+    letter-spacing: 1px;
+    border: 3px solid rgba(184, 169, 57, 0.732);
+    border-radius: 10px;
+    background-color: rgba(198, 214, 91, 0.367);
+    color:rgb(16, 24, 3);
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 4px rgba(198, 236, 91, 0.837);
+    margin-right: 5rem;
+}
+
+.btn-div {
+    display: inline-flex;
+}
