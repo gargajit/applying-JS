@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat GPT</title>
+    <style>
+        p {
+            font-family: cursive;
+            font-size: large;
+            padding: 8px 20px;
+            border: 2px solid;
+            border-radius: 2rem;
+        }
+        #right {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+        #left {
+            display: flex;
+        }
+        #right > p {
+            border: 2px solid #f2eded;
+            /*background-color: #be8b2e3a;*/
+            background-color: #f2eded;
+        }
+        #left > p {
+            border: 2px solid #ffff; 
+            background-color: #91a8d135;
+        }
+        span {
+            color:teal;
+        }
+    </style>
+</head>
+<body>
+    <div id="right">
+        <p>Hello Chat!</p>
+    </div>
+
+    <div id="left">
+        <p>Hi, How can I help you today?</p>
+    </div>
+
+    <div id="right">
+        <p>Gimme the current Date and time..</p>
+    </div>
+
+    <div id="left">
+        <p>Sure, here is the current Date and Time:<br>
+        <span><script>
+            document.write(Date());
+        </script></span>
+        </p>
+    </div>
+</body>
+</html>
