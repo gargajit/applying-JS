@@ -1,0 +1,26 @@
+#btn {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 5px 12px;
+            letter-spacing: 1px;
+            border: 3px solid rgba(178, 184, 57, 0.732);
+            border-radius: 10px;
+            background-color: rgba(208, 220, 46, 0.367);
+            color:rgb(10, 3, 24);
+            cursor: pointer;
+            text-transform: uppercase;
+            box-shadow: 2px 2px 4px rgba(190, 202, 86, 0.837);
+            margin-right: 5rem;
+        }
+        #container {
+            margin-top: 20px;
+            width: 400px;
+            height: 400px;
+            background-color: antiquewhite;
+            position: relative;
+        }
+        #animate {
+            width: 50px;
+            height: 50px;
+            background-color: blueviolet;
+            position: absolute;
+        }
