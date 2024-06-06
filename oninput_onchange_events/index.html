@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oninput Event</title>
+</head>
+<body>
+    <h1>Oninput Event</h1>
+    Enter your first name (oninput) : <input type="text" id="fname" oninput="upperCase()"> <!--onInput-->
+    <br>
+    <br>
+    Enter your last name(onchange): <input type="text" id="lname" onchange="upperCase()">   <!--onChange-->
+    
+    <script>
+        function upperCase() {
+            const x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+
+            const y = document.getElementById("lname");
+            y.value = y.value.toUpperCase();
+        }
+    </script>
+</body>
+</html>
