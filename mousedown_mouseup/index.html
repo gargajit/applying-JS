@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onmousedown and onmouseup</title>
+    <style>
+        #magicBox {
+            width: 150px;
+            height: 50px;
+            background-color:rgba(95, 158, 160, 0.347);
+            padding: 40px;
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2 style="background-color:wheat; padding: 5px; display: inline-block;">onmousedown, onmouseup and onclick</h2>
+    <div id="magicBox" onmousedown="mDown(this)" onmouseup="mUp(this)">Click Me!</div>
+
+    <script>
+        function mDown(obj) {
+            obj.innerHTML = "Release";
+            obj.style.backgroundColor = "blueviolet";
+            obj.style.color = "white";
+            
+        }
+
+        function mUp(obj) {
+            obj.innerHTML = "Thank You :)";
+            obj.style.backgroundColor = "tomato";
+            obj.style.color = "black"
+        }
+    </script>
+</body>
+</html>
