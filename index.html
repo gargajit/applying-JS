@@ -5,10 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Hello World Alert</title>
     <style>
-
+        body {
+            background-color:rgba(240, 255, 255, 0.729);
+            margin: 0px;
+        }
+        .div-one {
+            height: 100vh;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
         button {
             font-family: Arial, Helvetica, sans-serif;
-            padding: 8px 12px;
+            font-size: 1.3rem;
+            padding: 30px 40px;
             letter-spacing: 1px;
             border: 3px solid rgba(43, 159, 226, 0.732);
             border-radius: 10px;
@@ -20,10 +31,12 @@
         }
     </style>
 </head>
+    
 <body>
-    <div class="player-one">
+    <div class="div-one">
         <button id="btn" type="button">Click Me!</button>
     </div>
+    
     <script>
         document.getElementById("btn").addEventListener("click", function() { 
             alert("Hello World!"); 
