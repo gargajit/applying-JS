@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop using HTMLCollection</title>
+    <style>
+        h1 {
+            color:steelblue;
+            background-color: ;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Loop using HTMLCollection</h1>
+    <p>The getElementsByTagName() method returns an HTMLCollection object.</p>
+    <p>The index starts at 0.</p>
+    <p>The length property defines the number of elements in an HTMLCollection.</p>
+    <p>The length property is useful when you want to loop through the elements in a collection.</p>
+    
+    <script>
+        const myCollection = document.getElementsByTagName("p");
+        
+        let i=0;
+        function changeColor() {
+            if (i < myCollection.length) {
+                myCollection[i].style.color = "saddlebrown";
+                i++;
+            }             
+            
+            else {
+                clearInterval(intervalId);
+            }
+        }
+
+        const intervalId = setInterval(changeColor, 1000);
+    </script>
+
+
+</body>
+</html>
