@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loop using HTMLCollection</title>
+    <style>
+        p {
+            display: inline-flex;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Loop using HTMLCollection</h1>
+    <p>The getElementsByTagName() method returns an HTMLCollection object.</p><br>
+    <p>The index starts at 0.</p><br>
+    <p>The length property defines the number of elements in an HTMLCollection.</p><br>
+    <p>The length property is useful when you want to loop through the elements in a collection.</p>
+    
+    <script>
+        const myCollection = document.getElementsByTagName("p");
+        
+        for (let i=0; i < myCollection.length; i++) {
+            myCollection[i].addEventListener("mouseover", function() {
+                this.style.color = "red";
+            });
+            myCollection[i].addEventListener("mouseout", function() {
+                this.style.color = "black";
+            });
+        }
+
+    </script>
+
+</body>
+</html>
