@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Left</title>
+</head>
+<body>
+    
+</body>
+<script>
+    lifeInWeeks(prompt("Enter your age:"));
+    function lifeInWeeks(age) {  
+        
+        var yearsLeft = 90 - age;
+        var daysLeft = yearsLeft * 365;
+        var weeksLeft = yearsLeft * 52;
+        var monthsLeft = yearsLeft * 12;
+                
+        
+        alert("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left.")
+            
+        }
+    
+</script>
+</html>
