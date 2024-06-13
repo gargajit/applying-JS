@@ -17,12 +17,10 @@
         }
     </style>
 </head>
-    
 <body>
     <h1 id="addName"></h1>
     <p id="data"></p>
 </body>
-    
 <script>
     var name = prompt("Enter your name: ")
     var age = prompt("Enter your age:");
@@ -36,14 +34,18 @@
                 
         
         alert("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left.")
-        return [monthsLeft, weeksLeft, monthsLeft];
+        return [daysLeft, weeksLeft, monthsLeft];
     }
 
     const updateH1 = document.getElementById("addName");
-    updateH1.innerHTML = `Hello ${name}!`;
+    updateH1.innerHTML = `Hello <span>${name}</span>!`;
     
     const updateP = document.getElementById("data");
-    updateP.innerHTML = `You live life once, make it worth every moment. <br> Days left: ${days} <br> Weeks left: ${weeks} <br> Months Left: ${months}`
+    updateP.innerHTML = `<span><b>\"You only live once; make every moment count.\"</b></span> <br> 
+    Days left: ${days} <br> 
+    Weeks left: ${weeks} <br> 
+    Months Left: ${months}`
+
     
 </script>
 </html>
