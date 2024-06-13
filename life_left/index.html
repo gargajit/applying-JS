@@ -23,11 +23,25 @@
             font-size: 1rem;
             color:rgba(160, 50, 50, 0.64);
         }
+
+        .popup {
+            position: absolute;
+            display: none;
+            border: 1px solid #ccc;
+            background-color: rgb(233, 229, 220);
+            padding: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
     </style>
 </head>
 <body>
     <h1 id="addName"></h1>
     <p id="data"></p>
+    <div id="popup" class="popup">
+        Life expectancy is a statistical measure of the average time someone is expected to live, 
+        based on the year of their birth, current age and other demographic factors including their sex.
+    </div>
 </body>
 <script>
     var name = prompt("Enter your name: ")
@@ -54,6 +68,30 @@
     Weeks left: ${weeks} <br> 
     Months Left: ${months} <br>
     <span id="terms">(with respect to Life Expectancy of 90 years.)</span>`
+
+    document.addEventListener('DOMContentLoaded', (event) => {
+            const hoverTarget = document.getElementById('terms');
+            const popup = document.getElementById('popup');
+
+            hoverTarget.addEventListener('mouseover', (event) => {
+                popup.style.display = 'block';
+                positionPopup(event);
+            });
+
+            hoverTarget.addEventListener('mousemove', (event) => {
+                positionPopup(event);
+            });
+
+            hoverTarget.addEventListener('mouseout', () => {
+                popup.style.display = 'none';
+            });
+
+            function positionPopup(event) {
+                const offset = 10; // Offset to prevent flickering
+                popup.style.left = event.pageX + offset + 'px';
+                popup.style.top = event.pageY + offset + 'px';
+            }
+        });
 
     
 </script>
