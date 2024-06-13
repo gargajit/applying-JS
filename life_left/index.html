@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Life Left</title>
+</head>
+<body>
+    <h1 id="addName"></h1>
+    <p id="data"></p>
+</body>
+<script>
+    var name = prompt("Enter your name: ")
+    var age = prompt("Enter your age:");
+    var [days, weeks, months] = lifeInWeeks(age);
+    function lifeInWeeks(age) {  
+        
+        var yearsLeft = 90 - age;
+        var daysLeft = yearsLeft * 365;
+        var weeksLeft = yearsLeft * 52;
+        var monthsLeft = yearsLeft * 12;
+                
+        
+        alert("You have " + daysLeft + " days, " + weeksLeft + " weeks, and " + monthsLeft + " months left.")
+        return [monthsLeft, weeksLeft, monthsLeft];
+    }
+
+    const updateH1 = document.getElementById("addName");
+    updateH1.innerHTML = `Hello ${name}!`;
+    
+    const updateP = document.getElementById("data");
+    updateP.innerHTML = `You live life once, make it worth every moment. <br> Days left: ${days} <br> Weeks left: ${weeks} <br> Months Left: ${months}`
+
+    
+</script>
+</html>
