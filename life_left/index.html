@@ -44,7 +44,10 @@
     </div>
 </body>
 <script>
-    var name = prompt("Enter your name: ")
+    var name = prompt("Enter your name: ");
+    var firstLetter = name.slice(0,1).toUpperCase();
+    var otherLetters = name.slice(1, name.length);
+    var capitalizedName = firstLetter + otherLetters; 
     var age = prompt("Enter your age:");
     var [days, weeks, months] = lifeInWeeks(age);
     function lifeInWeeks(age) {  
@@ -60,7 +63,7 @@
     }
 
     const updateH1 = document.getElementById("addName");
-    updateH1.innerHTML = `Hello <span>${name}</span>!`;
+    updateH1.innerHTML = `Hello <span>${capitalizedName}</span>!`;
     
     const updateP = document.getElementById("data");
     updateP.innerHTML = `<span><b>\"You only live once; make every moment count.\"</b></span> <br> 
