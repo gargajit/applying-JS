@@ -1,16 +1,16 @@
-let i = 1;
-while (i <= 100) {
-    if (i % 3 === 0 && i % 5 === 0) {
-        console.log ("fizzbuzz");
+var output = [];
+var i = 1;
+
+function fizzbuzz() {
+  if (i % 3 === 0 && i % 5 === 0) {
+    output.push("fizzbuzz");
+  } else if (i % 3 === 0) {
+      output.push("fizz");
+  } else if (i % 5 === 0) {
+      output.push("buzz");
     } else {
-        if (i % 3 === 0) {
-            console.log ("fizz");
-        } else if (i % 5 === 0) {
-            console.log("buzz");
-        }
-        else {
-            console.log(i);
-        }
+      output.push(i);
     }
   i++;
+  console.log(output);
 }
