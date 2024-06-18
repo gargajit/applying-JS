@@ -1,5 +1,5 @@
-var sequence = [];
 function fibonacciGenerator(n) {
+  var sequence = [];
   if (n == 1) {
     sequence = [0];
     return sequence;
