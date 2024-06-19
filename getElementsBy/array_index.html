@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1 id="title">Hello</h1>
+
+    <input type="checkbox">
+
+    <button class="btn">Click Me</button>
+
+    <p><b>getElementsBy</b> methods are plural and return results in the form of an array. 
+      Therefore, to apply properties to elements selected by <b>TagName</b> or <b>ClassName</b>, 
+      we need to use array indexing to select the specific tag to which we want to apply the property.</p>
+    
+    <ul id="list">
+        <li class="item"><a href="http://www.google.com">Google</a></li>
+        <li class="item">Second</li>
+        <li class="item">Third</li>
+    </ul>
+    <script>
+        var third_item = document.getElementsByClassName("item")[2];
+        third_item.innerHTML = "Modified"
+        third_item.style.color = "red";
+
+        document.getElementsByTagName('li')[0].style.fontSize = "1.5rem";
+    </script>
+</body>
+</html>
