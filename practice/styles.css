@@ -1,0 +1,11 @@
+h1 {
+  color: red;
+}
+
+.change_bg_color {
+  background-color: rgb(169, 248, 213);
+}
+
+.huge {
+  font-size: 10rem;
+}
