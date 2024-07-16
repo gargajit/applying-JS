@@ -1,0 +1,25 @@
+.keyboard {
+    display: grid;
+}
+.row1 {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.row2 {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.row3 {
+    display: flex;
+    gap: 10px;
+    margin: 10px;
+}
+
+.keyboard_btn {
+    padding: 5px 10px;
+}
+
