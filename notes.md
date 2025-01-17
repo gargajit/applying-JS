@@ -81,3 +81,17 @@ const yearsUntilRetirement = (birthYear, firstName) => {    //multiple parameter
 const checkRetirement = yearsUntilRetirement(1991, 'Ajit');
 console.log(checkRetirement);
 ```
+
+
+
+# Arrays
+```js
+const myDetails = [
+"Ajit", 
+"Garg", 
+2025 - 1991, 
+'developer', 
+['HTML', 'CSS', 'JS', 'Node', 'Express']
+];
+```
+
