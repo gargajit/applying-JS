@@ -95,3 +95,44 @@ const myDetails = [
 ];
 ```
 
+## Array Methods
+```js
+const friends = ['Krishna', 'Arjun', 'Rama'];
+```
+### Add Elements
+- **push method**: adds new element at the end of the array and it does returns the length of the new array.
+```js
+let newLength = friends.push('Vibhishan');
+console.log(friends);  // ['Krishna', 'Arjun', 'Rama', 'Vibhishan']
+console.log(newLength); // 4
+```
+- **unshift method**: adds new element at the beginning of the array and it also does return the length of the new array.
+```js
+newLength = friends.unshift("Kabir");
+console.log(friends);  // ['Kabir', 'Krishna', 'Arjun', 'Rama', 'Vibhishan']
+console.log(newLength);  // 5
+```
+### Remove Elements
+- **pop method**: removes the last element of the array and it returns the popped element.
+```js
+const poppedName = friends.pop();
+console.log(friends);  // ['Kabir', 'Krishna', 'Arjun', 'Rama']
+console.log(poppedName);  // Vibhishan
+```
+- **shift method**: removes the first element of the array and it also returns the popped element.
+```js
+const removeFirstName = friends.shift();
+console.log(friends);  // ['Krishna', 'Arjun', 'Rama']
+console.log(removeFirstName);  // Kabir
+```
+### indexOf method
+tells us at which position (zero-based) is the given element is. If the element is not in the list, it will return -1
+```js
+console.log(friends.indexOf("Rama"));  // 2
+```
+### includes method 
+(came in ES6) returns boolean value true if the element is in the array else false.
+```js
+console.log(friends.includes("Arjun")); // True
+console.log(friends.includes("Kabir")); // False
+```
