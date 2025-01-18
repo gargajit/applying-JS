@@ -136,3 +136,89 @@ console.log(friends.indexOf("Rama"));  // 2
 console.log(friends.includes("Arjun")); // True
 console.log(friends.includes("Kabir")); // False
 ```
+
+# Objects
+```js
+const myDetails = {
+firstName: 'Ajit',
+lastName: 'Garg',
+age: 34,
+profession: 'developer',
+skills: ['HTML', 'CSS', 'JS', 'Node', 'Express'],
+};
+```
+This is the simplest way of writing a JS object. There are other ways too.
+`Note:` The keys are also called the properties of the object.
+
+
+**How to retrieve data**
+```js
+// Dot Notation
+console.log(myDetails.profession);  // developer
+```
+The (.) **dot** is an *operator* that will go to the `myDetails` object and look for the `profession` property.
+
+```js
+// Bracket Notation
+console.log(myDetails['profession']);  // developer
+```
+
+**When to use Dot Notation and Bracket Notation**
+Only when we need to first compute the property name should we use `Bracket Notation`. Example 1:
+```js
+const nameKey = 'Name';
+console.log(myDetails['first' + nameKey]);  // Ajit
+console.log(myDetails['last' + nameKey]);  // Garg
+```
+Example 2:
+```js
+const interestedIn = prompt("What do you want to know about Ajit? Choose between firstName, lastName, age, profession, skills");  // user enters profession
+console.log(`${interestedIn}:`, myDetails[interestedIn]);  // profession: developer
+```
+If you try to use dot notation in `Example 2`, it will return **`undefined`** but instead of looking for the value stored in the const `interestedIn`, it treats it as a property name but there is no such property defined inside the object `myDetails`.
+
+**How to add new property**
+```js
+// Dot Notation
+myDetails.country = 'India';
+
+// Bracket Notation
+myDetails['hometown'] = 'Lucknow';
+
+console.log(myDetails);
+{
+    "firstName": "Ajit",
+    "lastName": "Garg",
+    "age": 34,
+    "profession": "developer",
+    "skills": ["HTML", "CSS", "JS", "Node", "Express"],
+    "country": "India",
+    "hometown": "Lucknow"
+}
+```
+
+Function Expression works fine in the JS Object but not function declaration.
+Example:
+```js
+const myDetails = {
+    firstName: 'Ajit',
+    lastName: 'Garg',
+    birthYear: 1991,
+    profession: 'developer',
+    skills: ['HTML', 'CSS', 'JS', 'Node', 'Express'],
+    hasDriversLicense: true,
+
+    calcAge: function(birthYear) {
+        return 2025 - birthYear;
+    }
+};
+```
+The key `calcAge` has a *function value*.
+The function inside the Object is called **Method**.
+
+```js
+// Dot Notation
+console.log(myDetails.calcAge(1991));   // 34
+// Bracket Notation
+console.log(myDetails['calcAge'](1991));   // 34
+```
