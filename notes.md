@@ -222,3 +222,53 @@ console.log(myDetails.calcAge(1991));   // 34
 // Bracket Notation
 console.log(myDetails['calcAge'](1991));   // 34
 ```
+
+As we already have the `birthYear` as a *property* in the object. 
+To access it in the method, JS gives us access to a special variable called **`this`**.
+
+**this** variable equals to the object on which the method is called. 
+or
+**this** variable equals to the object calling the method.
+
+
+(myDetails object is calling the method)
+```js
+calcAge: function() {
+        console.log(this); 
+        return 2025 - this.birthYear;
+    }
+
+// Output on console.log(this);
+{
+    "firstName": "Ajit",
+    "lastName": "Garg",
+    "birthYear": 1991,
+    "profession": "developer",
+    "skills": [
+        "frontend",
+        "Express"
+    ],
+    "hasDriversLicense": true
+}
+```
+
+**this** will allow us to read the birthYear from this object itself without having to pass it in as a parameter into the method.
+```js
+const myDetails = {
+    firstName: 'Ajit',
+    lastName: 'Garg',
+    birthYear: 1991,
+    profession: 'developer',
+    skills: ['frontend', 'Express'],
+    hasDriversLicense: true,
+
+    // calcAge: function(birthYear) {
+    //     return 2025 - birthYear;
+    // }
+    calcAge: function() {
+        return 2025 - this.birthYear;
+    }
+};
+
+console.log(myDetails.calcAge());   // 34
+```
