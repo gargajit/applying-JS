@@ -272,3 +272,31 @@ const myDetails = {
 
 console.log(myDetails.calcAge());   // 34
 ```
+Suppose the method has been called multiple times, every time there will be a calculation of the mathematical operation of `2025 - this.birthYear`. 
+Suppose it was more than this simple computation, on every call we have to do all the computation. 
+```js
+calcAge: function() {
+        return 2025 - this.birthYear;
+    }
+};
+
+// Four times we have to compute the value of 2025 - this.birthYear
+console.log(myDetails.calcAge());
+console.log(myDetails.calcAge());
+console.log(myDetails.calcAge());
+console.log(myDetails.calcAge());
+```
+Instead, we can create a new property (age) and store the computation of `2025 - this.birthYear` for once and return the property value every time it's called instead of computing each time.
+```js
+calcAge: function() {
+        this.age = 2025 - this.birthYear;
+        return this.age;
+    }
+
+console.log(myDetails.calcAge());  // Computed once
+
+// Get the value of new property age
+console.log(myDetails.age);  
+console.log(myDetails.age);
+console.log(myDetails.age);
+```
