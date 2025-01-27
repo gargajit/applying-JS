@@ -33,11 +33,7 @@ overlay.addEventListener('click', closeModal);
 document.addEventListener('keydown', function (event) {
   if (event.key === 'Escape') {
     if (!modal.classList.contains('hidden')) {
-      modal.classList.add('hidden');
-      overlay.classList.add('hidden');
-    } else {
-      console.log(modal.classList);
-      console.log('hidden class is present');
+      closeModal();
     }
   }
 });
