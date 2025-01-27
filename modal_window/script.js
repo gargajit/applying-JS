@@ -31,9 +31,7 @@ overlay.addEventListener('click', closeModal);
 
 // event handler to close the modal when escape key is pressed
 document.addEventListener('keydown', function (event) {
-  if (event.key === 'Escape') {
-    if (!modal.classList.contains('hidden')) {
-      closeModal();
-    }
+  if (event.key === 'Escape' && !modal.classList.contains('hidden')) {
+    closeModal();
   }
 });
