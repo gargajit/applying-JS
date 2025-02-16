@@ -1,1 +1,1 @@
-# applying-JS
+# Practicing Javascript 
